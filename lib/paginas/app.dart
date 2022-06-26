@@ -34,13 +34,13 @@ class _AppState extends State<App> {
   }
 
   Widget _crearBotonera() {
-    return Expanded(
-      flex: 2,
-      child: Container(
-        height: 400,
-        child: Column(
-          children: <Widget>[
-            Row(
+    return Container(
+      height: 400,
+      child: Column(
+        children: <Widget>[
+          Expanded(
+            flex: 1,
+            child: Row(
               children: <Widget>[
                 _crearBoton("AC", Colors.deepOrange),
                 _crearBoton("DEL", Colors.deepOrange),
@@ -48,7 +48,10 @@ class _AppState extends State<App> {
                 _crearBoton("/", Colors.deepOrange),
               ],
             ),
-            Row(
+          ),
+          Expanded(
+            flex: 1,
+            child: Row(
               children: <Widget>[
                 _crearBoton("7", Colors.white),
                 _crearBoton("8", Colors.white),
@@ -56,7 +59,10 @@ class _AppState extends State<App> {
                 _crearBoton("*", Colors.deepOrange),
               ],
             ),
-            Row(
+          ),
+          Expanded(
+            flex: 1,
+            child: Row(
               children: <Widget>[
                 _crearBoton("4", Colors.white),
                 _crearBoton("5", Colors.white),
@@ -64,7 +70,10 @@ class _AppState extends State<App> {
                 _crearBoton("-", Colors.deepOrange),
               ],
             ),
-            Row(
+          ),
+          Expanded(
+            flex: 1,
+            child: Row(
               children: <Widget>[
                 _crearBoton("1", Colors.white),
                 _crearBoton("2", Colors.white),
@@ -72,16 +81,18 @@ class _AppState extends State<App> {
                 _crearBoton("+", Colors.deepOrange)
               ],
             ),
-            Row(
-              children: <Widget>[
-                _crearBoton("^", Colors.deepOrange),
-                _crearBoton("0", Colors.white),
-                _crearBoton(".", Colors.white),
-                _crearBoton("=", Colors.deepOrange),
-              ],
-            )
-          ],
-        ),
+          ),
+          Expanded(
+              flex: 1,
+              child: Row(
+                children: <Widget>[
+                  _crearBoton("^", Colors.deepOrange),
+                  _crearBoton("0", Colors.white),
+                  _crearBoton(".", Colors.white),
+                  _crearBoton("=", Colors.deepOrange),
+                ],
+              )),
+        ],
       ),
     );
   }
